@@ -6,9 +6,10 @@ namespace rht
     {
         static void Main(string[] args)
         {
-          // FizzBuzz.GenerateBuzz(1,2);
-          string test = "test";
-          Logger.WriteFile(test);
+          FizzBuzz.GenerateBuzz(1,31);
+          // string test = "test";
+          // Logger.WriteLine(test, test, test);
+
         }
     }
 }
