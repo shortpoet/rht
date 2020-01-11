@@ -1,6 +1,6 @@
 using System;
 
-namespace rht
+namespace rht.LinkedList
 {
   public class LynkedList
   {

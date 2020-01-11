@@ -3,8 +3,9 @@ using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using rht.LinkedList;
 
-namespace rht
+namespace rht.LinkedList
 {
     public class Lynk
     {      
