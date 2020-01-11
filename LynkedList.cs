@@ -97,6 +97,56 @@ namespace rht
         }
       }
     }
+
+    public int Count()
+    {
+      int count = 0;
+      Node current = this.head;
+      if (current != null)
+      {
+        count = 1;
+        while (current.next != null)
+        {
+          count++;
+          current = current.next;
+        }
+      }
+      return count;
+    }
+    public void TopsyTurvy()
+    {
+      Node previous = null;
+      Node current = this.head;
+      Node _next = null;
+
+      while (current !=null)
+      {
+        _next = current.next;
+        current.next = previous;
+        previous = current;
+        current = _next;
+      }
+      this.head = previous;
+    }
+    public LynkedList CopsyCurvy()
+    {
+      LynkedList copy = new LynkedList();
+      copy = this;
+      Node previous = null;
+      Node current = copy.head;
+      Node _next = null;
+
+      while (current !=null)
+      {
+        _next = current.next;
+        current.next = previous;
+        previous = current;
+        current = _next;
+      }
+      copy.head = previous;
+      return copy;
+    }
+
     public void PrintAllNodes()
     {
       Node current = head;
@@ -106,6 +156,18 @@ namespace rht
         Console.WriteLine(current.data);
         current = current.next;
       }
+    }
+    public int MakeComposite()
+    {
+      string temp = "";
+      Node current = head;
+      // print all nodes until there is no next to set as current eg end of list
+      while (current != null)
+      {
+        temp+=current.data.ToString();
+        current = current.next;
+      }
+      return Int32.Parse(temp);
     }
 
     public void AddFirst(object data)
