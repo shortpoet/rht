@@ -4,4 +4,41 @@
 
 limit = 1
 layer = [0, 1]
+first = [0, 1]
+last = [1-0, 1-1]
+     = [ 1,   0 ]
+
+################
+## Inner Loop ##
+################
+
+################
+## layer = 0 ##
+################
+
+i = 0, 
+
+###########
+## i = 0 ##
+###########
+
+first = 0
+int offset = i - first(i)
+offset = 0 - 0 = 0
+
+int top = matrix[first][i]
+int top = matrix[0][0]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[0][0] = matrix[1 - 0][0]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[1 - 0][0] = matrix[1][1 - 0]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[1][1 - 0] = matrix[0][1]
+
+matrix[i][innerLast] = top
+matrix[0][1] = top
+
 

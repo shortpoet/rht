@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using rht.FizzBuzz;
 using rht.LinkedList;
 using rht.Matrix;
@@ -79,7 +80,10 @@ namespace rht
           // PrintMatrix.ToConsole(rev4b);
           // Console.WriteLine("Counter Clock" + Environment.NewLine);
           // PrintMatrix.ToConsole(CounterClockwise.rotate90(matrix4));
-          Algo.Writer.Write(6);
+          foreach (int n in Enumerable.Range(2,10))
+          {
+            Algo.Writer.Write(n);
+          }
         }
     }
 }

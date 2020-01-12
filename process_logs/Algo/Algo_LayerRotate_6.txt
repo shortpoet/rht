@@ -6,5 +6,235 @@ limit = 3
 layer = [0, 1, 2, 3]
 first = [0, 1, 2, 3]
 last = [5-0, 5-1, 5-2, 5-3]
-     = [ 5,   6,   7,   8 ]
+     = [ 5,   4,   3,   2 ]
+
+################
+## Inner Loop ##
+################
+
+################
+## layer = 0 ##
+################
+
+i = 0, 1, 2, 
+
+###########
+## i = 0 ##
+###########
+
+first = 0
+int offset = i - first(i)
+offset = 0 - 0 = 0
+
+int top = matrix[first][i]
+int top = matrix[0][0]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[0][0] = matrix[5 - 0][0]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[5 - 0][0] = matrix[5][5 - 0]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[5][5 - 0] = matrix[0][5]
+
+matrix[i][innerLast] = top
+matrix[0][5] = top
+
+###########
+## i = 1 ##
+###########
+
+first = 1
+int offset = i - first(i)
+offset = 1 - 0 = 1
+
+int top = matrix[first][i]
+int top = matrix[0][1]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[0][1] = matrix[5 - 1][0]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[5 - 1][0] = matrix[5][5 - 1]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[5][5 - 1] = matrix[1][5]
+
+matrix[i][innerLast] = top
+matrix[1][5] = top
+
+###########
+## i = 2 ##
+###########
+
+first = 2
+int offset = i - first(i)
+offset = 2 - 0 = 2
+
+int top = matrix[first][i]
+int top = matrix[0][2]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[0][2] = matrix[5 - 2][0]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[5 - 2][0] = matrix[5][5 - 2]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[5][5 - 2] = matrix[2][5]
+
+matrix[i][innerLast] = top
+matrix[2][5] = top
+
+###########
+## i = 3 ##
+###########
+
+first = 3
+int offset = i - first(i)
+offset = 3 - 0 = 3
+
+int top = matrix[first][i]
+int top = matrix[0][3]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[0][3] = matrix[5 - 3][0]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[5 - 3][0] = matrix[5][5 - 3]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[5][5 - 3] = matrix[3][5]
+
+matrix[i][innerLast] = top
+matrix[3][5] = top
+
+###########
+## i = 4 ##
+###########
+
+first = 4
+int offset = i - first(i)
+offset = 4 - 0 = 4
+
+int top = matrix[first][i]
+int top = matrix[0][4]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[0][4] = matrix[5 - 4][0]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[5 - 4][0] = matrix[5][5 - 4]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[5][5 - 4] = matrix[4][5]
+
+matrix[i][innerLast] = top
+matrix[4][5] = top
+
+################
+## layer = 1 ##
+################
+
+i = 0, 1, 2, 
+
+###########
+## i = 1 ##
+###########
+
+first = 1
+int offset = i - first(i)
+offset = 1 - 1 = 0
+
+int top = matrix[first][i]
+int top = matrix[1][1]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[1][1] = matrix[4 - 0][1]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[4 - 0][1] = matrix[4][4 - 0]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[4][4 - 0] = matrix[1][4]
+
+matrix[i][innerLast] = top
+matrix[1][4] = top
+
+###########
+## i = 2 ##
+###########
+
+first = 2
+int offset = i - first(i)
+offset = 2 - 1 = 1
+
+int top = matrix[first][i]
+int top = matrix[1][2]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[1][2] = matrix[4 - 1][1]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[4 - 1][1] = matrix[4][4 - 1]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[4][4 - 1] = matrix[2][4]
+
+matrix[i][innerLast] = top
+matrix[2][4] = top
+
+###########
+## i = 3 ##
+###########
+
+first = 3
+int offset = i - first(i)
+offset = 3 - 1 = 2
+
+int top = matrix[first][i]
+int top = matrix[1][3]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[1][3] = matrix[4 - 2][1]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[4 - 2][1] = matrix[4][4 - 2]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[4][4 - 2] = matrix[3][4]
+
+matrix[i][innerLast] = top
+matrix[3][4] = top
+
+################
+## layer = 2 ##
+################
+
+i = 0, 1, 2, 
+
+###########
+## i = 2 ##
+###########
+
+first = 2
+int offset = i - first(i)
+offset = 2 - 2 = 0
+
+int top = matrix[first][i]
+int top = matrix[2][2]
+
+matrix[first][i] = matrix[innerLast - offset][first]
+matrix[2][2] = matrix[3 - 0][2]
+
+matrix[innerLast - offset][first] = matrix[innerLast][innerLast - offset]
+matrix[3 - 0][2] = matrix[3][3 - 0]
+
+matrix[innerLast][innerLast - offset] = matrix[i][innerLast]
+matrix[3][3 - 0] = matrix[2][3]
+
+matrix[i][innerLast] = top
+matrix[2][3] = top
+
 
