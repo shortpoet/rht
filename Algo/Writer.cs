@@ -12,10 +12,10 @@ namespace rht.Algo
       {
         
         // int range = 8;
-        string process = "Algo";
+        string process = "AlgoWriter";
         
         // set filename to loop index
-        string filename = "LayerRotate" + "_" + n;
+        string filename = "LayerRotateLoops" + "_" + n;
         // header blob
         StringBuilder header = new StringBuilder();
         header.Append("###########" + Environment.NewLine);
