@@ -54,17 +54,18 @@ namespace rht.Algo
           innerLayer.Append("################" + Environment.NewLine);
           innerLayer.Append(String.Format(@"## layer = {0} ##{1}", layer, Environment.NewLine));
           innerLayer.Append("################" + Environment.NewLine + Environment.NewLine);
-          string innerI = "i = ";
-          // int[] innerI = Enumerable.Range(0, (n / 2)).Select(x => x).ToArray();
-          foreach (var i in Enumerable.Range(0, (n / 2)))
-          {
-            innerI += i + ", ";
-          }
-          innerLayer.Append(innerI + Environment.NewLine +Environment.NewLine);
           // first iterates
           int first = layer;
           // last changes 
           int innerLast = n - 1 - layer;
+          string innerI = "i = ";
+          int[] innerIArr = Enumerable.Range(first, innerLast).Select(x => x).ToArray();
+          for (int x = first; x < innerLast; x++)
+          {
+            innerI += x + ", ";
+          }
+          innerLayer.Append(innerI + Environment.NewLine +Environment.NewLine);
+
           for (int i = first; i < innerLast; i++) {
             innerLayer.Append("###########" + Environment.NewLine);
             innerLayer.Append(String.Format(@"## i = {0} ##{1}", i, Environment.NewLine));
