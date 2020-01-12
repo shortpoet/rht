@@ -51,7 +51,8 @@ namespace rht.Matrix
         blob += line;
         blob += Environment.NewLine;
       }
-      Logger.WriteBlob("Matrix", filename, blob);
+      bool append = true;
+      Logger.WriteBlob("Matrix", filename, blob, append);
     }
   }
 }

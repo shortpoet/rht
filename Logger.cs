@@ -53,7 +53,7 @@ namespace rht
           sw.Flush();
         }
       }
-      public static void WriteBlob (string process, string filename, string blob){
+      public static void WriteBlob (string process, string filename, string blob, bool append){
 
         string curDir = Directory.GetCurrentDirectory();
         string debugDir = Directory.GetParent(curDir).FullName;
@@ -70,7 +70,7 @@ namespace rht
 
         Console.WriteLine(String.Format(@"Dir Inf: {0}", dirInf));
 
-        using (StreamWriter sw = new StreamWriter(String.Format(@"{0}\{1}_{2}.txt", dirInf, process, filename), true))
+        using (StreamWriter sw = new StreamWriter(String.Format(@"{0}\{1}_{2}.txt", dirInf, process, filename), append))
         {
           sw.Write(blob);
           sw.Write(Environment.NewLine);

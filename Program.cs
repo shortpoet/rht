@@ -65,20 +65,21 @@ namespace rht
             row4
           };
 
-          int m = matrix3.GetLength(0);
-          int n = matrix3.GetLength(1);
-          Clockwise.DisplayMatrix(matrix3, m, n);
-          Clockwise.Degree90Matrix(matrix3, m, n);
+          // int m = matrix3.GetLength(0);
+          // int n = matrix3.GetLength(1);
+          // Clockwise.DisplayMatrix(matrix3, m, n);
+          // Clockwise.Degree90Matrix(matrix3, m, n);
 
-          PrintMatrix.ToConsole(matrix3);
-          PrintMatrix.ToConsole(matrix4);
-          string filename = "4x4";
-          PrintMatrix.ToFile(filename, matrix4);
-          Console.WriteLine("Layer" + Environment.NewLine);
-          int[][] rev4b = LayerRotate.rotateMatrixBy90Degree(matrix4b, matrix4b.GetLength(0));
-          PrintMatrix.ToConsole(rev4b);
-          Console.WriteLine("Counter Clock" + Environment.NewLine);
-          PrintMatrix.ToConsole(CounterClockwise.rotate90(matrix4));
+          // PrintMatrix.ToConsole(matrix3);
+          // PrintMatrix.ToConsole(matrix4);
+          // string filename = "4x4";
+          // PrintMatrix.ToFile(filename, matrix4);
+          // Console.WriteLine("Layer" + Environment.NewLine);
+          // int[][] rev4b = LayerRotate.rotateMatrixBy90Degree(matrix4b, matrix4b.GetLength(0));
+          // PrintMatrix.ToConsole(rev4b);
+          // Console.WriteLine("Counter Clock" + Environment.NewLine);
+          // PrintMatrix.ToConsole(CounterClockwise.rotate90(matrix4));
+          Algo.Writer.Write(6);
         }
     }
 }
